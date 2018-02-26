@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/zgjm_top"
+        android:contentDescription="@string/app_name"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/lab_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_01"
+            android:drawableTop="@mipmap/icon_01"/>
+
+        <TextView
+            android:id="@+id/lab_02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_02"
+            android:drawableTop="@mipmap/icon_02"/>
+
+        <TextView
+            android:id="@+id/lab_03"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_03"
+            android:drawableTop="@mipmap/icon_03"/>
+
+        <TextView
+            android:id="@+id/lab_04"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_04"
+            android:drawableTop="@mipmap/icon_04"/>
+
+        <TextView
+            android:id="@+id/lab_05"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_05"
+            android:drawableTop="@mipmap/icon_05"/>
+
+        <TextView
+            android:id="@+id/lab_06"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_06"
+            android:drawableTop="@mipmap/icon_06"/>
+
+        <TextView
+            android:id="@+id/lab_07"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_07"
+            android:drawableTop="@mipmap/icon_07"/>
+
+        <TextView
+            android:id="@+id/lab_08"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_08"
+            android:drawableTop="@mipmap/icon_08"/>
+
+        <TextView
+            android:id="@+id/lab_09"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_09"
+            android:drawableTop="@mipmap/icon_09"/>
+
+        <TextView
+            android:id="@+id/lab_10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/lab_10"
+            android:drawableTop="@mipmap/icon_10"/>
+
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">解梦大师</string>
+    <string name="lab_01">身体类</string>
+    <string name="lab_02">鬼神类</string>
+    <string name="lab_03">情感类</string>
+    <string name="lab_04">建筑类</string>
+    <string name="lab_05">植物类</string>
+    <string name="lab_06">动物类</string>
+    <string name="lab_07">物品类</string>
+    <string name="lab_08">自然类</string>
+    <string name="lab_09">生活类</string>
+    <string name="lab_10">人物类</string>
+</resources>
