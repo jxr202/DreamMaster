@@ -11,4 +11,6 @@ public class URLs {
 
     static final String query = "http://v.juhe.cn/dream/query?key=586c05502c7f2ce12d49c121284d1748";
 
+    static final String dreamCache = "https://raw.githubusercontent.com/jxr202/DreamMaster/master/dreams.json";
+
 }
