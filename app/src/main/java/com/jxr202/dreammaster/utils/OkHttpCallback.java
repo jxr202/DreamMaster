@@ -1,4 +1,4 @@
-package com.jxr202.dreammaster;
+package com.jxr202.dreammaster.utils;
 
 import java.io.IOException;
 

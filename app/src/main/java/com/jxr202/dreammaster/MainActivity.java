@@ -1,12 +1,14 @@
 package com.jxr202.dreammaster;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
+
+import com.jxr202.dreammaster.appdata.URLs;
+import com.jxr202.dreammaster.utils.OkHttpUtils;
+import com.jxr202.dreammaster.utils.YoumiSdkHelper;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -23,28 +25,8 @@ public class MainActivity extends BaseActivity {
 
     private static final String TAG = "jxr202";
 
-    @BindView(R.id.search)
-    ImageView mSearch;
-    @BindView(R.id.lab_01)
-    TextView lab01;
-    @BindView(R.id.lab_02)
-    TextView lab02;
-    @BindView(R.id.lab_03)
-    TextView lab03;
-    @BindView(R.id.lab_04)
-    TextView lab04;
-    @BindView(R.id.lab_05)
-    TextView lab05;
-    @BindView(R.id.lab_06)
-    TextView lab06;
-    @BindView(R.id.lab_07)
-    TextView lab07;
-    @BindView(R.id.lab_08)
-    TextView lab08;
-    @BindView(R.id.lab_09)
-    TextView lab09;
-    @BindView(R.id.lab_10)
-    TextView lab10;
+    @BindView(R.id.rl_native_spot_ad)
+    RelativeLayout mNativeSpotAdLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +34,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        getAll();
+        YoumiSdkHelper.showNativeSpotAd(mNativeSpotAdLayout, this);
     }
 
     @OnClick({R.id.search, R.id.lab_01, R.id.lab_02, R.id.lab_03, R.id.lab_04, R.id.lab_05, R.id.lab_06, R.id.lab_07, R.id.lab_08, R.id.lab_09, R.id.lab_10})
@@ -121,6 +103,12 @@ public class MainActivity extends BaseActivity {
             e.printStackTrace();
         }
         return "";
+    }
+
+    @Override
+    public void onBackPressed() {
+        YoumiSdkHelper.hideNativeSpotAd(mNativeSpotAdLayout);
+        super.onBackPressed();
     }
 
 }

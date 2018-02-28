@@ -2,6 +2,8 @@ package com.jxr202.dreammaster;
 
 import android.app.Application;
 
+import com.jxr202.dreammaster.appdata.AppCache;
+import com.jxr202.dreammaster.utils.OkHttpUtils;
 import com.tencent.bugly.crashreport.CrashReport;
 
 /**

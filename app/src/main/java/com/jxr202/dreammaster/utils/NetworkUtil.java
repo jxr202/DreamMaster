@@ -1,4 +1,4 @@
-package com.jxr202.dreammaster;
+package com.jxr202.dreammaster.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -17,6 +17,11 @@
         jxr202:titleTextSize="17sp"
         jxr202:titleTextVisibility="visible" />
 
+    <RelativeLayout
+        android:id="@+id/rl_native_spot_ad"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

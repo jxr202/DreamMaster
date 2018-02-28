@@ -12,8 +12,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.jxr202.colorful_ui.TitleBar;
+import com.jxr202.dreammaster.appdata.AppCache;
+import com.jxr202.dreammaster.appdata.URLs;
+import com.jxr202.dreammaster.utils.OkHttpUtils;
+import com.jxr202.dreammaster.utils.YoumiSdkHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +42,9 @@ public class SearchActivity extends BaseActivity {
     EditText mSearch;
     @BindView(R.id.history)
     ListView mHistory;
+    @BindView(R.id.rl_native_spot_ad)
+    RelativeLayout mViewGroup;
+
 
     private SearchAdapter mAdapter;
     private List<Dream> mDreams;
@@ -129,6 +137,7 @@ public class SearchActivity extends BaseActivity {
                 return false;
             }
         });
+        YoumiSdkHelper.showBannerViewAd(mViewGroup, SearchActivity.this);
     }
 
     private void queryDreams(String word) {
@@ -194,4 +203,9 @@ public class SearchActivity extends BaseActivity {
         mAdapter.notifyDataSetChanged();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        YoumiSdkHelper.hideBannerViewAd(this);
+    }
 }

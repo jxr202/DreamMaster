@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 //import abc.abc.abc.AdManager;
 
@@ -20,6 +21,14 @@ public class BaseActivity extends Activity {
             window.setStatusBarColor(getResources().getColor(R.color.app_accent));
         }
         //AdManager.getInstance(this).init(AppConfig.APP_ID, AppConfig.APP_SECRET, true);
+    }
+
+    protected void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    protected void showToast(int res) {
+        Toast.makeText(this, res, Toast.LENGTH_SHORT).show();
     }
 
 }

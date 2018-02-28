@@ -1,4 +1,4 @@
-package com.jxr202.dreammaster;
+package com.jxr202.dreammaster.appdata;
 
 /**
  * Created by Jxr35 on 2018/2/27

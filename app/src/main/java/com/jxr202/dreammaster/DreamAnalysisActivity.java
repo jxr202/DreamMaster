@@ -2,10 +2,15 @@ package com.jxr202.dreammaster;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jxr202.colorful_ui.TitleBar;
+import com.jxr202.dreammaster.utils.ImageUtil;
+import com.jxr202.dreammaster.utils.NetworkUtil;
+import com.jxr202.dreammaster.utils.YoumiSdkHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,6 +26,10 @@ public class DreamAnalysisActivity extends BaseActivity {
 
     private Dream mDream;
 
+    private static final String TAG = "jxr202";
+
+    private Handler mHandler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +37,14 @@ public class DreamAnalysisActivity extends BaseActivity {
         ButterKnife.bind(this);
         initTitleBar();
         initData();
+
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                YoumiSdkHelper.showSlideableSpotAd(DreamAnalysisActivity.this);
+            }
+        }, 1000);
+
     }
 
     private void initTitleBar() {
@@ -64,6 +81,32 @@ public class DreamAnalysisActivity extends BaseActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        boolean onBackPressed = YoumiSdkHelper.onBackPressed(this);
+        Log.i(TAG, "onBackPressed: " + onBackPressed);
+        if (!onBackPressed) {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        YoumiSdkHelper.onPause(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        YoumiSdkHelper.onStop(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        YoumiSdkHelper.onDestroy(this);
+    }
 
     private static long lastClickTime;
 

@@ -1,16 +1,12 @@
-package com.jxr202.dreammaster;
+package com.jxr202.dreammaster.utils;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.util.Log;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.jxr202.dreammaster.appdata.URLs;
+import com.jxr202.dreammaster.appdata.AppCache;
 
 import java.io.IOException;
-import java.net.CookieManager;
-import java.net.CookiePolicy;
-import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -51,7 +47,7 @@ public class OkHttpUtils {
     /**
      * get请求
      **/
-    static void get(String url, Callback callback) {
+    public static void get(String url, Callback callback) {
         try {
             Request request = new Request.Builder()
                     .url(url)
